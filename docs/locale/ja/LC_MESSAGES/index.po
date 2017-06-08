@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../index.rst:7
 msgid "peewee"
-msgstr ""
+msgstr "PythonのORM Peeweeの日本語ドキュメント"
 
 #: ../../index.rst:11
 msgid ""

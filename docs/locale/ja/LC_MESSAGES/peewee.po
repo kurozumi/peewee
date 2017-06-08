@@ -117,36 +117,39 @@ msgid ""
 "Insert a new row into the database. If any fields on the model have "
 "default values, these values will be used if the fields are not "
 "explicitly set in the ``insert`` dictionary."
-msgstr ""
+msgstr "新しい行をデータベースに挿入します。"
+"モデルのいずれかのフィールドにデフォルト値がある場合、"
+"フィールドが ``insert`` ディクショナリに明示的に設定されていなければデフォルト値が使用されます。"
 
 #: ../../peewee/api.rst:89
 msgid "mapping of field or field-name to expression."
-msgstr ""
+msgstr "フィールドまたはフィールド名から式へのマッピング。"
 
 #: ../../peewee/api.rst:90 ../../peewee/api.rst:139 ../../peewee/api.rst:184
 msgid "an :py:class:`InsertQuery` for the given :py:class:`Model`."
-msgstr ""
+msgstr "指定された :py:class:`Model`の :py:class:`InsertQuery`"
 
 #: ../../peewee/api.rst:92
 msgid "Example showing creation of a new user:"
-msgstr ""
+msgstr "新しいユーザーの作成を示す例："
 
 #: ../../peewee/api.rst:99
 msgid "You can also use :py:class:`Field` objects as the keys:"
-msgstr ""
+msgstr ":py:class:`Field` オブジェクトをキーとして使用することもできます:"
 
 #: ../../peewee/api.rst:105
 msgid ""
 "If you have a model with a default value on one of the fields, and that "
 "field is not specified in the ``insert`` parameter, the default will be "
 "used:"
-msgstr ""
+msgstr "いずれかのフィールドにデフォルト値を持つモデルがあり、"
+"そのフィールドが ``insert`` パラメーターで指定されていない場合は、デフォルトが使用されます:"
 
 #: ../../peewee/api.rst:118
 msgid ""
 "When an insert query is executed on a table with an auto-incrementing "
 "primary key, the primary key of the new row will be returned."
-msgstr ""
+msgstr "オートインクリメントの主キーを持つテーブルで挿入クエリを実行すると、新しい行の主キーが返されます。"
 
 #: ../../peewee/api.rst:122
 msgid ""
@@ -154,33 +157,37 @@ msgid ""
 "that yields dictionaries. As with :py:meth:`~Model.insert`, fields that "
 "are not specified in the dictionary will use their default value, if one "
 "exists."
-msgstr ""
+msgstr "一度に複数の行を挿入します。"
+"``rows`` パラメーターは、辞書でなければなりません。"
+":py:meth:`Model.insert` の場合と同様に、ディクショナリに指定されていないフィールドは、"
+"デフォルト値（存在する場合）を使用します。"
 
 #: ../../peewee/api.rst:128
 msgid ""
 "Due to the nature of bulk inserts, each row must contain the same fields."
 " The following will not work:"
-msgstr ""
+msgstr "一括挿入の性質上、各行には同じフィールドが含まれている必要があります。"
+"以下は動作しません:"
 
 #: ../../peewee/api.rst:138
 msgid "An iterable containing dictionaries of field-name-to-value."
-msgstr ""
+msgstr "フィールド名と値がセットのディクショナリを含むリスト。"
 
 #: ../../peewee/api.rst:141
 msgid "Example of inserting multiple Users:"
-msgstr ""
+msgstr "複数のユーザーを挿入する例:"
 
 #: ../../peewee/api.rst:151
 msgid ""
 "Because the ``rows`` parameter can be an arbitrary iterable, you can also"
 " use a generator:"
-msgstr ""
+msgstr "``rows`` パラメータは任意の反復可能なものにすることができるため、ジェネレータを使用することもできます:"
 
 #: ../../peewee/api.rst:162
 msgid ""
 "If you are using SQLite, your SQLite library must be version 3.7.11 or "
 "newer to take advantage of bulk inserts."
-msgstr ""
+msgstr "SQLiteを使用している場合、一括挿入を利用するには、SQLiteライブラリのバージョンが3.7.11以降である必要があります。"
 
 #: ../../peewee/api.rst:166
 msgid ""
@@ -188,7 +195,9 @@ msgid ""
 "limit can be modified at compile-time or at run-time, **but** if "
 "modifying at run-time, you can only specify a *lower* value than the "
 "default limit."
-msgstr ""
+msgstr "SQLiteには、ステートメントごとに999のバウンド変数のデフォルト制限があります。"
+"この制限はコンパイル時または実行時に変更できますが、"
+"実行時に変更する場合はデフォルトの制限よりも小さい値しか指定できません。"
 
 #: ../../peewee/api.rst:171
 msgid "For more information, check out the following SQLite documents:"
@@ -4819,17 +4828,18 @@ msgstr "インストールとテスト"
 
 #: ../../peewee/installation.rst:6
 msgid "Most users will want to simply install the latest version, hosted on PyPI:"
-msgstr ""
+msgstr "ほとんどのユーザーはPyPIでホストされている最新バージョンをインストールするだけです:"
 
 #: ../../peewee/installation.rst:12
 msgid "Peewee comes with two C extensions that can optionally be compiled:"
-msgstr ""
+msgstr "Peeweeにはオプションでコンパイルできる2つのCエクステンションが付属しています:"
 
 #: ../../peewee/installation.rst:14
 msgid ""
 "Speedups, which includes miscellaneous functions re-implemented with "
 "Cython. This module will be built automatically if Cython is installed."
-msgstr ""
+msgstr "Cythonで再実装されたその他の関数が含まれているSpeedupsモジュール。"
+"Cythonがインストールされている場合、このモジュールは自動的に構築されます。"
 
 #: ../../peewee/installation.rst:15
 msgid ""
@@ -4844,7 +4854,8 @@ msgid ""
 "If you have Cython installed, then the ``speedups`` module will "
 "automatically be built. If you wish to also build the SQLite Cython "
 "extension, you must manually run:"
-msgstr ""
+msgstr "Cythonがインストールされている場合は、 ``speedups`` モジュールが自動的に構築されます。"
+"SQLite Cythonエクステンションをビルドする場合は、手動で実行する必要があります:"
 
 #: ../../peewee/installation.rst:27
 msgid "Installing with git"
@@ -4854,19 +4865,21 @@ msgstr "gitでインストールする"
 msgid ""
 "The project is hosted at https://github.com/coleifer/peewee and can be "
 "installed using git:"
-msgstr ""
+msgstr "このプロジェクトは https://github.com/coleifer/peewee にホストされていて、"
+"gitを使用してインストールできます:"
 
 #: ../../peewee/installation.rst:38
 msgid ""
 "If you would like to build the SQLite extension in a git checkout, you "
 "can run:"
-msgstr ""
+msgstr "git checkoutでSQLite拡張機能をビルドしたい場合は、以下のように実行できます"
 
 #: ../../peewee/installation.rst:46
 msgid ""
 "On some systems you may need to use ``sudo python setup.py install`` to "
 "install peewee system-wide."
-msgstr ""
+msgstr "いくつかのシステムではシステム全体にpeeweeをインストールするために"
+"``sudo python setup.py install`` を使用する必要があります。"
 
 #: ../../peewee/installation.rst:49
 msgid "Running tests"
@@ -4874,7 +4887,7 @@ msgstr "テストの実行"
 
 #: ../../peewee/installation.rst:51
 msgid "You can test your installation by running the test suite."
-msgstr ""
+msgstr "テストスイートを実行してインストールをテストできます。"
 
 #: ../../peewee/installation.rst:60
 msgid ""
@@ -4882,11 +4895,14 @@ msgid ""
 "``runtests.py`` script. By default the test suite is run using SQLite and"
 " the ``playhouse`` extension tests are not run. To view the available "
 "test runner options, use:"
-msgstr ""
+msgstr "``runtests.py`` スクリプトを使用して、"
+"特定の機能や特定のデータベースドライバをテストすることができます。"
+"デフォルトでは、テストスイートはSQLiteを使用して実行され、``playhouse`` エクステンションのテストは実行されません。"
+"使用可能なテストランナーのオプションを表示するには、次のコマンドを使用します:"
 
 #: ../../peewee/models.rst:4
 msgid "Models and Fields"
-msgstr "モデルとフィールと"
+msgstr "モデルとフィールド"
 
 #: ../../peewee/models.rst:6
 msgid ""
@@ -10648,7 +10664,7 @@ msgstr ""
 
 #: ../../peewee/querying.rst:69
 msgid "Bulk inserts"
-msgstr "バルクインサート"
+msgstr "一括挿入"
 
 #: ../../peewee/querying.rst:71
 msgid ""
@@ -10762,20 +10778,22 @@ msgid ""
 "Peewee allows you to perform atomic updates. Let's suppose we need to "
 "update some counters. The naive approach would be to write something like"
 " this:"
-msgstr ""
+msgstr "Peeweeはアトミックアップデートが実行することができます。"
+"いくつかのカウンターを更新する必要があるとしましょう。"
+"素朴なアプローチだと、このように書きます:"
 
 #: ../../peewee/querying.rst:182
 msgid ""
 "**Do not do this!** Not only is this slow, but it is also vulnerable to "
 "race conditions if multiple processes are updating the counter at the "
 "same time."
-msgstr ""
+msgstr "**これをしないで！** これは遅いだけでなく、複数のプロセスが同時にカウンタを更新している場合、競合状態に対しても脆弱です。"
 
 #: ../../peewee/querying.rst:184
 msgid ""
 "Instead, you can update the counters atomically using "
 ":py:meth:`~Model.update`:"
-msgstr ""
+msgstr "代わりに :py:meth:`Model.update` を使用するとカウンターをアトミックに更新できます:"
 
 #: ../../peewee/querying.rst:191
 #, python-format
@@ -10783,7 +10801,8 @@ msgid ""
 "You can make these update statements as complex as you like. Let's give "
 "all our employees a bonus equal to their previous bonus plus 10% of their"
 " salary:"
-msgstr ""
+msgstr "これらの更新ステートメントを好きなだけ複雑にすることができます。"
+"すべての従業員に前回のボーナスに加えて給与の10％のボーナスを加えましょう:"
 
 #: ../../peewee/querying.rst:198
 msgid ""
@@ -10791,7 +10810,9 @@ msgid ""
 "had a denormalized column on the ``User`` model that stored the number of"
 " tweets a user had made, and we updated this value periodically. Here is "
 "how you might write such a query:"
-msgstr ""
+msgstr "サブクエリを使用してカラムの値を更新することもできます。"
+"ユーザが作成したツイートの数を格納した ``Userl`` モデルの非正規化カラムを持ち、この値を定期的に更新したとします。"
+"このようなクエリを書く方法は次のとおりです:"
 
 #: ../../peewee/querying.rst:207
 msgid "Deleting records"
@@ -12430,7 +12451,7 @@ msgstr "クイックスタート"
 msgid ""
 "This document presents a brief, high-level overview of Peewee's primary "
 "features. This guide will cover:"
-msgstr ""
+msgstr "このドキュメントでは、Peeweeの主な機能のハイレベルな概要を簡単に説明します。"
 
 #: ../../peewee/quickstart.rst:8
 msgid ":ref:`model-definition`"
@@ -12449,7 +12470,8 @@ msgid ""
 "If you'd like something a bit more meaty, there is a thorough tutorial on"
 " :ref:`creating a \"twitter\"-style web app <example-app>` using peewee "
 "and the Flask framework."
-msgstr ""
+msgstr "何かもう少し欲しい方は、peeweeとFlaskフレームワークを使った”
+" :ref:`creating a \"twitter\"-style web app <example-app>` というチュートリアルがあります。"
 
 #: ../../peewee/quickstart.rst:17
 msgid ""
