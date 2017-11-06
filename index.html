@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PythonのORM Peeweeの日本語ドキュメント &mdash; peewee 2.10.2 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/modified_theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="検索" href="search.html"/>
+    <link rel="top" title="peewee 2.10.2 ドキュメント" href="#"/>
+        <link rel="next" title="インストールとテスト" href="peewee/installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> peewee
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.10.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="peewee/installation.html">インストールとテスト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/quickstart.html">クイックスタート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/example.html">サンプル・アプリケーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/more-resources.html">その他のリソース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/contributing.html">貢献する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/database.html">データベースの管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/models.html">モデルとフィールド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html">クエリ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#query-operators">クエリ演算子</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#foreign-keys">外部キー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#performance-techniques">パフォーマンステクニック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/transactions.html">トランザクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/playhouse.html">Playhouse。Peeweeへの拡張</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/api.html">APIリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/hacks.html">Hacks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">peewee</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>PythonのORM Peeweeの日本語ドキュメント</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="peewee">
+<h1>PythonのORM Peeweeの日本語ドキュメント<a class="headerlink" href="#peewee" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<img alt="_images/peewee-logo.png" src="_images/peewee-logo.png" />
+<p>Peeweeはシンプルで小さなORMです。それは表現力が豊かですが概念はほとんどなく、学びやすく直感的に使うことができます。</p>
+<ul class="simple">
+<li>小さく表現力のあるORM</li>
+<li>Pythonで書かれ、バージョン2.6+および3.2+をサポートしています。</li>
+<li>sqlite、mysql、postgresqlを組み込みサポートしています。</li>
+<li><a class="reference internal" href="peewee/playhouse.html#postgres-ext"><span class="std std-ref">postgres hstore/json/配列</span></a>、 <a class="reference internal" href="peewee/playhouse.html#sqlite-ext"><span class="std std-ref">sqliteフルテキスト検索</span></a>、 <a class="reference internal" href="peewee/playhouse.html#migrate"><span class="std std-ref">スキーママイグレーション</span></a> など多数の拡張機能が利用可能です。</li>
+</ul>
+<a class="reference external image-reference" href="peewee/database.html#using-postgresql"><img alt="postgresql" src="_images/postgresql.png" /></a>
+<a class="reference external image-reference" href="peewee/database.html#using-mysql"><img alt="mysql" src="_images/mysql.png" /></a>
+<a class="reference external image-reference" href="peewee/database.html#using-sqlite"><img alt="sqlite" src="_images/sqlite.png" /></a>
+<p><a class="reference external" href="https://github.com/coleifer/peewee">GitHub</a> でホストされているPeeweeのソースコード。</p>
+<p>peeweeは初めてですか？始めるにあたって最も役立つドキュメントのリストは次のとおりです。</p>
+<ul class="simple">
+<li><a class="reference internal" href="peewee/quickstart.html#quickstart"><span class="std std-ref">クイックスタートガイド</span></a> – このガイドでは必需品をすべてカバーしています。それを通過するには5〜10分かかります。</li>
+<li><a class="reference internal" href="peewee/querying.html#query-operators"><span class="std std-ref">さまざまなクエリ演算子のガイド</span></a> では、クエリを作成して式を結合する方法について説明しています。</li>
+<li><a class="reference internal" href="peewee/models.html#field-types-table"><span class="std std-ref">フィールドタイプテーブル</span></a> には、peeweeがサポートするさまざまなフィールドタイプと、それらが受け入れるパラメータがリストされています。<a class="reference internal" href="peewee/playhouse.html#extra-fields"><span class="std std-ref">特殊/カスタムフィールドタイプ</span></a> を含む <a class="reference internal" href="peewee/playhouse.html#playhouse"><span class="std std-ref">拡張モジュール</span></a> もあります。</li>
+</ul>
+<div class="section" id="contents">
+<h2>コンテンツ<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="peewee/installation.html">インストールとテスト</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/installation.html#installing-with-git">gitでインストールする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/installation.html#running-tests">テストの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/installation.html#optional-dependencies">Optional dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/quickstart.html">クイックスタート</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/quickstart.html#model-definition">モデル定義</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/quickstart.html#storing-data">データの保存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/quickstart.html#retrieving-data">データの取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/quickstart.html#working-with-existing-databases">既存データベースの操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/quickstart.html#what-next">次は何？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/example.html">サンプル・アプリケーション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/example.html#running-the-example">サンプルの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/example.html#diving-into-the-code">コードへの潜入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/example.html#more-examples">より多くの例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/more-resources.html">その他のリソース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/contributing.html">貢献する</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/contributing.html#patches">パッチ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/contributing.html#bugs">バグ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/contributing.html#questions">質問</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/database.html">データベースの管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#creating-a-database-connection-and-tables">データベース接続とテーブルの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#using-postgresql">Postgresqlの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#using-sqlite">SQLiteの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#using-berkeleydb">BerkeleyBDの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#using-mysql">MySQLの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#connecting-using-a-database-url">データベースのURLを使用した接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#multi-threaded-applications">マルチスレッドアプリケーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#run-time-database-configuration">実行時のデータベース設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#dynamically-defining-a-database">データベースの動的定義</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#connection-pooling">接続のプーリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#read-slaves">スレーブを読み込む</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#schema-migrations">スキーママイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#generating-models-from-existing-databases">既存データベースからモデル生成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#adding-request-hooks">リクエストフックの追加</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#additional-connection-initialization">追加接続の初期化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#advanced-connection-management">高度な接続管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#using-multiple-databases">複数データベースの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#database-errors">データベースエラー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#automatic-reconnect">自動再接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#logging-queries">クエリのロギング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#generating-skeleton-code">スケルトンコードの生成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/database.html#adding-a-new-database-driver">新しいデータベースドライバーの追加</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/models.html">モデルとフィールド</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#fields">フィールド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#creating-model-tables">モデルテーブルの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#model-options-and-table-metadata">モデルオプションとテーブルのメタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#indexes-and-constraints">インデックスと制約</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#non-integer-primary-keys-composite-keys-and-other-tricks">非整数主キー、複合キーおよびその他のトリック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#self-referential-foreign-keys">自己参照外部キー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/models.html#circular-foreign-key-dependencies">循環外部キー依存関係</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html">クエリ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#creating-a-new-record">新しいレコードの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#bulk-inserts">一括挿入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#updating-existing-records">既存レコードの更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#atomic-updates">アトミックアップデート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#deleting-records">レコードの削除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#selecting-a-single-record">一つのレコードを選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#create-or-get">作成するか取得する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#selecting-multiple-records">複数のレコード選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#filtering-records">レコードのフィルタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#sorting-records">レコードのソート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#getting-random-records">ランダムにレコードを取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#paginating-records">レコードのページネーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#counting-records">レコードのカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#aggregating-records">レコードの集計</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#retrieving-scalar-values">スカラー値の取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#sql-functions-subqueries-and-raw-expressions">SQL関数、サブクエリ、および 「生の式」</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#security-and-sql-injection">セキュリティとSQLインジェクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#window-functions">ウィンドウ関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#retrieving-raw-tuples-dictionaries">生のタプル/辞書の取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#returning-clause">Returing句</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#query-operators">クエリ演算子</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#three-valued-logic">3つの論理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#adding-user-defined-operators">ユーザー定義演算子の追加</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#expressions">式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#foreign-keys">外部キー</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#traversing-foreign-keys">外部キーのトラバース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#joining-tables">テーブルの結合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#implementing-many-to-many">多対多の実装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#self-joins">自己結合</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/querying.html#performance-techniques">パフォーマンステクニック</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#avoiding-n-1-queries">N+1クエリを避ける</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#iterating-over-lots-of-rows">たくさんの行を繰り返す</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/querying.html#speeding-up-bulk-inserts">バルクインサートの高速化</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/transactions.html">トランザクション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/transactions.html#context-manager">コンテキストマネージャー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/transactions.html#decorator">デコレータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/transactions.html#nesting-transactions">トランザクションのネスト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/transactions.html#explicit-transaction">明示的なトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/transactions.html#autocommit-mode">自動コミットモード</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/playhouse.html">Playhouse。Peeweeへの拡張</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#sqlite-extensions">Sqlite拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#sqliteq">SqliteQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#sqlite-user-defined-functions">Sqliteユーザー定義関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#apsw-an-advanced-sqlite-driver">apsw、高度なsqliteドライバ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#berkeleydb-backend">BerkeleyDBバックエンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#sqlcipher-backend">Sqlcipherバックエンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#postgresql-extensions">PostgreSQLの拡張機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#dataset">データセット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#django-integration">Djangoの統合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#fields">フィールド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#generic-foreign-keys">一般的な外部キー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#hybrid-attributes">ハイブリッド属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#key-value-store">キーバリューストア</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#shortcuts">ショートカット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#signal-support">シグナルサポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#pwiz-a-model-generator">pwiz、モデルジェネレータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#schema-migrations">スキーママイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#reflection">リフレクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#database-url">データベースのURL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#csv-utils">CSV Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#connection-pool">コネクションプール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#read-slaves">スレーブを読み込む</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#test-utils">Test Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#pskel">pskel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/playhouse.html#flask-utils">Flask Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/api.html">APIリファレンス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#models">モデル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#fields">フィールド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#query-types">クエリの種類</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#database-and-its-subclasses">データベースとそのサブクエリ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#transaction-savepoint-and-executioncontext">トランザクション、セーブポイントおよびExecutionContext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#metadata-types">メタデータの種類</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/api.html#misc">その他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="peewee/hacks.html">Hacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peewee/hacks.html#optimistic-locking">Optimistic Locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/hacks.html#top-object-per-group">Top object per group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/hacks.html#top-n-objects-per-group">Top N objects per group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peewee/hacks.html#writing-custom-functions-with-sqlite">Writing custom functions with SQLite</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="note">
+<h2>注意<a class="headerlink" href="#note" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>あなたがバグや奇妙な行動を見つけたり、新しい機能のアイディアを持っているなら、GitHubで <a class="reference external" href="https://github.com/coleifer/peewee/issues?state=open">イシューをオープン</a> したり、<a class="reference external" href="http://charlesleifer.com/contact/">私に連絡</a> してください。</p>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>インデックスとテーブル<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">モジュール索引</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">検索ページ</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="peewee/installation.html" class="btn btn-neutral float-right" title="インストールとテスト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright charles leifer.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.10.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
