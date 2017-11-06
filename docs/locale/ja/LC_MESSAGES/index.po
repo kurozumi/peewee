@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) charles leifer
+# This file is distributed under the same license as the peewee package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: peewee 2.8.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-30 22:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../index.rst:7
+msgid "peewee"
+msgstr "PythonのORM Peeweeの日本語ドキュメント"
+
+#: ../../index.rst:11
+msgid ""
+"Peewee is a simple and small ORM. It has few (but expressive) concepts, "
+"making it easy to learn and intuitive to use."
+msgstr "Peeweeはシンプルで小さなORMです。"
+"それは表現力が豊かですが概念はほとんどなく、学びやすく直感的に使うことができます。"
+
+#: ../../index.rst:13
+msgid "A small, expressive ORM"
+msgstr "小さく表現力のあるORM"
+
+#: ../../index.rst:14
+msgid "Written in python with support for versions 2.6+ and 3.2+."
+msgstr "Pythonで書かれ、バージョン2.6+および3.2+をサポートしています。"
+
+#: ../../index.rst:15
+msgid "built-in support for sqlite, mysql and postgresql"
+msgstr "sqlite、mysql、postgresqlを組み込みサポートしています。"
+
+#: ../../index.rst:16
+msgid ""
+":ref:`numerous extensions available <playhouse>` (:ref:`postgres "
+"hstore/json/arrays <postgres_ext>`, :ref:`sqlite full-text-search "
+"<sqlite_ext>`, :ref:`schema migrations <migrate>`, and much more)."
+msgstr ":ref:`postgres hstore/json/配列 <postgres_ext>`、 :ref:`sqliteフルテキスト検索 <sqlite_ext>`、 :ref:`スキーママイグレーション <migrate>` など多数の拡張機能が利用可能です。"
+
+#: ../../index.rst:30
+msgid ""
+"Peewee's source code hosted on `GitHub "
+"<https://github.com/coleifer/peewee>`_."
+msgstr "`GitHub <https://github.com/coleifer/peewee>`_ でホストされているPeeweeのソースコード。"
+
+#: ../../index.rst:32
+msgid ""
+"New to peewee? Here is a list of documents you might find most helpful "
+"when getting started:"
+msgstr "peeweeは初めてですか？始めるにあたって最も役立つドキュメントのリストは次のとおりです。"
+
+#: ../../index.rst:35
+msgid ""
+":ref:`Quickstart guide <quickstart>` -- this guide covers all the bare "
+"essentials. It will take you between 5 and 10 minutes to go through it."
+msgstr ":ref:`クイックスタートガイド <quickstart>` -- このガイドでは必需品をすべてカバーしています。"
+"それを通過するには5〜10分かかります。"
+
+#: ../../index.rst:36
+msgid ""
+":ref:`Guide to the various query operators <query-operators>` describes "
+"how to construct queries and combine expressions."
+msgstr ":ref:`さまざまなクエリ演算子のガイド <query-operators>` では、"
+"クエリを作成して式を結合する方法について説明しています。"
+
+#: ../../index.rst:37
+msgid ""
+":ref:`Field types table <field_types_table>` lists the various field "
+"types peewee supports and the parameters they accept. There is also an "
+":ref:`extension module <playhouse>` that contains :ref:`special/custom "
+"field types <extra-fields>`."
+msgstr ":ref:`フィールドタイプテーブル <field_types_table>` には、"
+"peeweeがサポートするさまざまなフィールドタイプと、"
+"それらが受け入れるパラメータがリストされています。"
+":ref:`特殊/カスタムフィールドタイプ <extra-fields>` を含む :ref:`拡張モジュール <playhouse>` もあります。"
+
+#: ../../index.rst:40
+msgid "Contents:"
+msgstr "コンテンツ"
+
+#: ../../index.rst:60
+msgid "Note"
+msgstr "注意"
+
+#: ../../index.rst:62
+msgid ""
+"If you find any bugs, odd behavior, or have an idea for a new feature "
+"please don't hesitate to `open an issue "
+"<https://github.com/coleifer/peewee/issues?state=open>`_ on GitHub or "
+"`contact me <http://charlesleifer.com/contact/>`_."
+msgstr "あなたがバグや奇妙な行動を見つけたり、"
+"新しい機能のアイディアを持っているなら、"
+"GitHubで `イシューをオープン <https://github.com/coleifer/peewee/issues?state=open>`_ したり、"
+"`私に連絡 <http://charlesleifer.com/contact/>`_ してください。"
+
+#: ../../index.rst:65
+msgid "Indices and tables"
+msgstr "インデックスとテーブル"
+
+#: ../../index.rst:67
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:68
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:69
+msgid ":ref:`search`"
+msgstr ""
+
