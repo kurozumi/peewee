@@ -1,7 +1,4 @@
 *.pyc
-*.mo
-_templates
-_build
 prof/
 playhouse/*.c
 playhouse/*.h
@@ -11,3 +8,4 @@ playhouse/tests/peewee_test.db
 MANIFEST
 peewee_test.db
 closure.so
+docs/_build/*
